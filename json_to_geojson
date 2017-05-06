@@ -1,0 +1,1 @@
+sudo find DIRECTORY -depth -name "*.json" -exec sh -c 'mv "$1" "${1%.json}.geojson"' _ {} \;
