@@ -1,0 +1,24 @@
+#to exec from django4starterkit container
+#command avaliable from manage.py
+python manage.py help --settings=geonode.settings
+
+#updatelayers and ignore errors
+python manage.py updatelayers -i --settings=geonode.settings
+
+#find geoserver broken layers
+python manage.py find_geoserver_broken_layers --settings=geonode.settings
+
+#import layers (.shp .tif .sld) in geonode for a single user
+python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/bf_jolanda_appezzamenti_2018_1r.shp --settings=geonode.settings
+
+python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/bf_cortona_pianocolt_2016_1r.shp --settings=geonode.settings
+
+python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/_112_20180623_msavi.geotiff --settings=geonode.settings
+
+python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/geonode/ --settings=geonode.settings
+
+#find geotiff files recursively and change format in .tif (move command)
+sudo find /home/agr10/GET-IT/EXTERNAL_DATA/geonode/ -depth -name "*.geotiff" -exec sh -c 'mv "$1" "${1%.geotiff}.tif"' _ {} \;
+
+#find geotiff files and change format in .tif (copy command)
+find /home/agr10/GET-IT/EXTERNAL_DATA/geonode/ -name '*.geotiff' -exec cp {} /home/agr10/GET-IT/EXTERNAL_DATA/ \;
