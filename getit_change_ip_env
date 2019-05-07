@@ -1,0 +1,1 @@
+sed -i 's/GEONODE_LB_HOST_IP=140.164.11.124/GEONODE_LB_HOST_IP=193.204.242.152/g' scripts/docker/env/production/*.env
