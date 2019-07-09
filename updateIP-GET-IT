@@ -1,0 +1,2 @@
+docker-compose exec django bash
+./manage.sh migrate_baseurl --source-address=areariservata.ibfservizi.it --target-address=95.110.149.171
