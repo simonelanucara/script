@@ -17,6 +17,8 @@ python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/_112_2018062
 
 python manage.py importlayers -u test -p /usr/src/app/EXTERNAL_DATA/geonode/ --settings=geonode.settings
 
+docker-compose exec django bash ./manage.sh importlayers -u test -p /usr/src/app/EXTERNAL_DATA/italy.shp
+
 #find geotiff files recursively and change format in .tif (move command)
 sudo find /home/agr10/GET-IT/EXTERNAL_DATA/geonode/ -depth -name "*.geotiff" -exec sh -c 'mv "$1" "${1%.geotiff}.tif"' _ {} \;
 
