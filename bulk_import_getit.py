@@ -1,3 +1,4 @@
+#to exec from host: docker-compose exec django python ./import.py
 import os
 
 directory_to_check = "/usr/src/app/EXTERNALDATA/get_it_aziende/"
