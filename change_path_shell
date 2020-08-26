@@ -1,0 +1,2 @@
+sed -i 's|/home/nfs_sat_data/satfarming/sentinel2/it/master/MSAVI/|../|g' /home/nfs_sat_data/satfarming/sentinel2/it/master/MSAVI/new_vrt_MSAVI/*.vrt
+#si usa il pipe | come separatore
